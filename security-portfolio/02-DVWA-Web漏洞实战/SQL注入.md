@@ -61,12 +61,6 @@ Surname:    dvwa@localhost        ← 数据库用户，不是 root
 
 位置可以互换（`select user(),database()` 也行），取决于哪一列会显示、类型是否兼容。
 
-### 第 5 步：拿表名（进阶）
-
-```sql
-1' union select 1,group_concat(table_name) from information_schema.tables where table_schema=database() #
-```
-
 ## 关键符号
 
 | 符号 | 作用 |
