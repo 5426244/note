@@ -11,13 +11,8 @@
 | 命令执行（含反弹 shell） | [命令执行.md](./命令执行.md) | Low / Medium / High | ✅ 完成 |
 | 文件包含（LFI → 读配置 → 拿数据库凭据） | [文件包含.md](./文件包含.md) | Low | ✅ 完成 |
 
-## 测试环境
 
-- DVWA（Damn Vulnerable Web Application），本地 Apache + MariaDB
-- 难度：Low（基础复现）/ Medium（绕过练习）/ High（黑名单与 Token 绕过）
-- 工具：浏览器开发者工具、Burp Suite（Repeater / Follow redirects）、curl、netcat、mysql 客户端
-
-## 三个我认为最值得讲的复现
+## 三个我认为最重要的点
 
 | 漏洞 | 关键点 | 一句话 |
 |---|---|---|
