@@ -10,6 +10,8 @@
 | CSRF（含 Token 重放） | [CSRF.md](./CSRF.md) | Low / Medium / High | ✅ 完成 |
 | 命令执行（含反弹 shell） | [命令执行.md](./命令执行.md) | Low / Medium / High | ✅ 完成 |
 | 文件包含（LFI → 读配置 → 拿数据库凭据） | [文件包含.md](./文件包含.md) | Low | ✅ 完成 |
+| 暴力破解（字典爆破 admin） | [screenshots/](./screenshots/) 28–29 | Low | ✅ 完成 |
+| 渗透（Metasploitable2 两个后门） | [screenshots/](./screenshots/) 30–32 | Low（后门类） | ✅ 完成 |
 
 
 ## 三个我认为最重要的点
